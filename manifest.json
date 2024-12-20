@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "Enregistreur de Sitographie",
+    "version": "1.0",
+    "description": "Enregistre les pages pour aider à créer une sitographie.",
+    "permissions": ["tabs", "storage"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icon.png"
+    }
+  }
+  

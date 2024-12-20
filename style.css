@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+  }
+  .header {
+    background: linear-gradient(90deg, rgba(138, 43, 226, 1) 0%, rgba(186, 85, 211, 1) 100%);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    box-shadow: 6px 6px 12px rgba(138, 43, 226, 0.5);
+  }
+
+
+  .globalcontent{
+    background-color: #f8f8f8;
+  }
+  /* Conteneur principal */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 190px; /* Hauteur fixe de l'extension */
+  background-color: #f8f8f8;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.containerlink{
+  padding:10px;
+}
+/* Bouton Sauvegarder */
+.save-button {
+  min-width: 200px; /* Taille réduite */
+  min-height: 50px; /* Taille réduite */
+  display: inline-flex;
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px; /* Taille réduite */
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(90deg, rgba(138, 43, 226, 1) 0%, rgba(186, 85, 211, 1) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 8px 8px 16px rgba(138, 43, 226, 0.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 8px; /* Taille réduite */
+}
+
+.save-button::before {
+  content: '';
+  border-radius: 1000px;
+  min-width: calc(200px + 6px); /* Ajusté à la nouvelle taille */
+  min-height: calc(50px + 6px); /* Ajusté à la nouvelle taille */
+  border: 4px solid #BA55D3;
+  box-shadow: 0 0 40px rgba(186, 85, 211, 0.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.save-button:hover, 
+.save-button:focus {
+  transform: translateY(-4px); /* Déplacement réduit */
+}
+
+.save-button:hover::before, 
+.save-button:focus::before {
+  opacity: 1;
+}
+
+
+.save-button:hover::after, 
+.save-button:focus::after {
+  animation: none;
+  display: none;
+}
+
+
+/* Styles pour les éléments de la liste */
+.link-item {
+  list-style: none;
+  margin: 10px 0;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+.link-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link-title {
+  flex-grow: 1;
+  text-decoration: none;
+  color: #000;
+}
+
+.button-container {
+  display: flex;
+  gap: 5px;
+}
+
+.edit-button,
+.delete-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+  color: red;
+}
+
+/* Bouton Tout Supprimer */
+.delete-all-button {
+  min-width: 90px; /* Taille minimale */
+  min-height: 22.5px; /* Taille minimale */
+  display: inline-flex;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px; /* Taille du texte */
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(90deg, rgba(255, 69, 58, 1) 0%, rgba(255, 99, 71, 1) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 6px 6px 12px rgba(255, 69, 58, 0.5);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 8px;
+  margin-top: 15px; /* Espace avec le bouton principal */
+}
+
+
+
+.delete-all-button:hover, 
+.delete-all-button:focus {
+  transform: translateY(-2px);
+}
+
+.delete-all-button:hover::before, 
+.delete-all-button:focus::before {
+  opacity: 1;
+}
+
+
+.delete-all-button:hover::after, 
+.delete-all-button:focus::after {
+  animation: none;
+  display: none;
+}
+
+.copy-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #4caf50; /* Couleur verte pour copier */
+}
+
+.copy-button:hover {
+  color: #388e3c;
+}
+
